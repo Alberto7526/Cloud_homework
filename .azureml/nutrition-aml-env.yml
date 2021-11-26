@@ -1,0 +1,12 @@
+name: nutrition-aml-env
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - scikit-learn
+  - numpy
+  - pandas
+  - pip
+  - pip:
+    - azureml-core
+    - azureml-defaults
