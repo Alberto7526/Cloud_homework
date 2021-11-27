@@ -37,3 +37,18 @@ Luego de haber realizado el entrenamiento del modelo de manera remota y su corre
 
 Para el despliegue del modelo, etapa en la cual se planea colocar el modelo en producción, se utilizaron los siguientes scripts para realizar el proceso de manera local “07-deploy-model-local.py” y de manera remota con ayuda de la nube de Azure, el script “08-deploy-model-remote.py”.  
 
+
+# PRUEBA DEL MODELO
+
+Para consumir el modelo creado como un servicio, se puede realizar una petición POST al siguiente link:
+
+http://bb3f6b19-a776-48db-a1d8-2a097cadbf55.eastus2.azurecontainer.io/score
+
+Y, utilizando el siguiente dato, se puede probar que predicción genera el modelo.
+
+**{
+    "data": 
+        [
+            [2476486.5,7066.212995,1.604451538,0,0,0,0,0.3422,51.9402,1.2775,0.9639,0.7046,0]
+        ]
+}**
