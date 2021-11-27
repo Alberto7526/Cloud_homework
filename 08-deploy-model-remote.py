@@ -17,7 +17,9 @@ inference_config = InferenceConfig(entry_script='./src/score.py', environment=en
 
 deployment_config = AciWebservice.deploy_configuration(cpu_cores=1, memory_gb=1)
 
-aci_service = Model.deploy(workspace=ws, name='nutrition-model-service', models=[model], inference_config=inference_config, deployment_config=deployment_config)
+aci_service = Model.deploy(workspace=ws, name='nutrition-model-service', 
+                           models=[model], inference_config=inference_config, 
+                           deployment_config=deployment_config)
 
 aci_service.wait_for_deployment(show_output=True)
 print(f'ACI state: {aci_service.state}')
